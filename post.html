@@ -13,7 +13,7 @@
 	<link href="fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
 	<link href="css/nivo-slider.css" rel="stylesheet" type="text/css" />
 	<link href="css/styler-farbtastic.css" rel="stylesheet" type="text/css" />
-	
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<!-- UPDATE BROWSER WARNING IF IE 7 OR LOWER -->
 	<!--[if lt IE 8]>
 	<link href="css/stop_ie.css" rel="stylesheet" type="text/css" />
@@ -70,7 +70,7 @@
 		<div id="page">
 			<div id="content">
 							
-				<h1>An article from the blog</h1>
+				<h1>博文内容</h1>
 				
 				<div class="hr"></div>
 				
@@ -85,19 +85,30 @@
 				<div class="vspace"></div>
 				
 				<!-- ARTICLE -->
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel massa eget ante tincidunt vestibulum. Aenean vel metus magna. Mauris nec velit tortor, quis euismod lectus. Nulla et arcu libero. Cras pretium, ipsum quis adipiscing condimentum, turpis urna lobortis neque, nec dignissim ipsum mauris sed nunc. Donec facilisis, lectus nec suscipit facilisis, mauris justo condimentum lectus, in lacinia purus sapien quis leo. Suspendisse pharetra erat sed enim varius a gravida urna dignissim. Etiam vel massa metus. Fusce elit dolor, viverra ut auctor sit amet, condimentum quis sem. In a nibh in lorem auctor sagittis in in augue. Curabitur fringilla eros in erat rhoncus posuere interdum nisl condimentum.</p>
-				<p>Maecenas laoreet lorem sit amet orci tempus venenatis. Proin lacus purus, ultricies sit amet scelerisque quis, sagittis eget nulla. Aliquam erat volutpat. Ut porta suscipit ante at venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce at bibendum dolor. Praesent tempor molestie est ac adipiscing. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam elementum, magna non sagittis elementum, risus leo ornare est, et consectetur diam quam id dui. Sed quis augue ipsum, non blandit mauris.</p>
-				<p>Donec vulputate tellus in neque semper at consectetur sem laoreet. Donec non ligula odio. Aenean tempor, orci eu iaculis vestibulum, diam tellus luctus nisi, dapibus gravida lorem nisi et elit. Pellentesque vitae magna a massa posuere faucibus.</p>
-				
+				<h2>前言</h2>
+				<p>平时开发Sprig Boot的时候，经常改动个小小的地方就要重新启动项目，这无疑是一种很差的体验。在此，博主收集了3种热部署的方案供大家选择。</p>
+				<h2>正文</h2>
+				<p>Spring Loaded是一个用于在JVM运行时重新加载类文件更改的JVM代理,Spring Loaded允许你动态的新增/修改/删除某个方法/字段/构造方法,同样可以修改作用在类/方法/字段/构造方法上的注解.也可以新增/删除/改变枚举中的值。
+					spring-loaded是一个开源项目,项目地址:https://github.com/spring-projects/spring-loaded
+					Spring Loaded有两种方式实现，分别是Maven引入依赖方式或者添加启动参数方式</p>
+				<p>然后直接右键运行启动类即可启动项目。
+
+					上面2种方式小伙伴随便选择一种即可,当系统通过 mvn spring-boot:run启动或者 右键application debug启动Java文件时，系统会监视classes文件，当有classes文件被改动时，系统会重新加载类文件，不用重启启动服务。
+
+					注：IDEA下需要重新编译文件 Ctrl+Shift+F9或者编译项目 Ctrl+F9
+					如何测试热部署是否可用呢，你可以先写个简单的Controller方法，返回个字符串，然后启动项目，接着修改下这个方法返回的字符串，Ctrl+Shift+F9编译下当前类，然后再刷新下页面看看是否内容改变了。
+
+					在 Spring Boot，模板引擎的页面默认是开启缓存，如果修改页面内容，刷新页面是无法获取修改后的页面内容，所以，如果我们不需要模板引擎的缓存，可以进行关闭。</p>
+
 				<div class="hr2"></div>
 			
 				<!-- POST INFO -->
 				<p class="blog-post-info">&nbsp;
-					<img src="images/icon-time.png" alt="" />&nbsp;March 14, 2012&nbsp;&nbsp;
+					<img src="images/icon-time.png" alt="" />&nbsp;2017-07-01&nbsp;&nbsp;
 					<img src="images/sep.gif" alt="" />&nbsp;&nbsp;
-					<img src="images/icon-category.png" alt="" />&nbsp;<a href="#">News</a>, <a href="#">Travel</a>&nbsp;&nbsp;
+					<img src="images/icon-category.png" alt="" />&nbsp;<a href="#">点赞(2)</a>, <a href="#">转发(2)</a>&nbsp;&nbsp;
 					<img src="images/sep.gif" alt="" />&nbsp;&nbsp;
-					<img src="images/icon-comment.png" alt="" />&nbsp;0 Comment(s)&nbsp;&nbsp;
+					<img src="images/icon-comment.png" alt="" />&nbsp;评论(2)&nbsp;&nbsp;
 				</p>
 				
 				<div class="hr2"></div>
@@ -106,16 +117,16 @@
 				<h2>Comments</h2>				
 				
 				<ul id="comments-list">
-					<li>					
+					<li>
 						<div class="comments-avatar">
-							<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" class="avatar" height="60" width="60" />				
+							<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" class="avatar" height="60" width="60" />
 						</div>
 						<div class="comments-text">
-							January 22, 2012., 9:49 am
-							<br /><b>Mr Joseph Smith</b><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel massa eget ante tincidunt vestibulum.
+							2017-07-03 09:40
+							<br /><b>阿里巴巴架构师</b><br />写得很不错，谢谢分享。
 							<br /><br />
-							<a href="#">Reply</a>
-						</div>		
+							<a href="#">回复</a>
+						</div>
 					</li>
 					<li>
 						<ul>
@@ -124,10 +135,10 @@
 								<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" class="avatar" height="60" width="60" />				
 							</div>
 							<div class="comments-text">
-								January 23, 2012., 11:25 am
-								<br /><b>Anna</b><br />Donec vulputate tellus in neque semper at consectetur!
+								2017-07-01 11:11
+								<br /><b>博主</b><br />谢谢支持！
 								<br /><br />
-								<a href="#">Reply</a>
+								<a href="#">回复</a>
 							</div>		
 						</li>
 						</ul>
@@ -137,17 +148,17 @@
 				<div class="hr2"></div>
 
 				<!-- COMMENTS REPLY -->
-				<h2>Leave a Comment</h2>	
+				<h2>留下你的脚步</h2>
 
 				<form action="post.html" method="post">
 				<ul id="respond">
 					<li>
 						<input name="author" id="author" type="text" class="comment-textinput" value="" />
-						<label for="author">Name <span class="required">*</span></label>					
+						<label for="author">用户名 <span class="required">*</span></label>
 					</li>
 					<li>
 						<input name="email" id="email" type="text" class="comment-textinput" value="" />
-						<label for="email">Email <span class="required">*</span> <span class="info">(will never be published)</span></label>					
+						<label for="email">邮箱 <span class="required">*</span> <span class="info">(以便于更多交流)</span></label>
 					</li>
 					<li>
 						<textarea rows="" cols="" class="comment-textarea" name="comment"></textarea>
@@ -177,47 +188,39 @@
 			
 				<!-- LOGO -->
 				<div id="logo">
-					<a href="index.html"><img src="images/logo.png" alt="" /></a>
+					<a href="index.html"><img src="images/logo.jpg" alt=""  class="img-circle"/></a>
 				</div>
-					
 				<!-- MENU -->
 				<ul id="menu">
-					<li><a href="index.html">HOME</a></li>
-					<li class="current"><a href="blog-1.html">BLOG</a>
+					<li class="current"><a href="index.html">主页</a></li>
+					<li><a href="blog-1.html">全部文章</a>
 						<ul>
-							<li><a href="blog-1.html">BLOG STYLE #1</a></li>
-							<li><a href="blog-2.html">BLOG STYLE #2</a></li>
+							<li><a href="blog-1.html">Java反射机制 #05</a></li>
+							<li><a href="blog-1.html">Spring boot #10</a></li>
 						</ul>
 					</li>
-					<li><a href="portfolio-3c.html">PORTFOLIO</a>
+					<li><a href="portfolio-3c.html">学习资料</a>
 						<ul>
-							<li><a href="portfolio-3c.html">PORTFOLIO &#8211; 3 COLUMNS</a></li>
-							<li><a href="portfolio-2c.html">PORTFOLIO &#8211; 2 COLUMNS</a></li>							
+							<li><a href="portfolio-3c.html">Spring &#8211; 3 </a></li>
+							<li><a href="portfolio-2c.html">hadoop &#8211; 2 </a></li>
 						</ul>
 					</li>
-					<li><a href="gallery.html">GALLERY</a></li>
-					<li><a href="#">STYLINGS</a>
-						<ul>
+					<li><a href="gallery.html">Java书单</a></li>
+					<li><a href="#">关于我</a>
+						<!--<ul>
 							<li><a href="stylings-texts.html">TEXTS</a></li>
 							<li><a href="stylings-table_columns.html">TABLE &#038; COLUMNS</a></li>
 							<li><a href="stylings-tabs_toggles.html">TABS, TOGGLES &#038; CAROUSEL</a></li>
 							<li><a href="stylings-images_videos.html">IMAGES &#038; VIDEOS</a></li>
 							<li><a href="stylings-contact_buttons.html">CONTACT FORM &#038; BUTTONS</a></li>
-						</ul>
+						</ul>-->
 					</li>
 				</ul>
 						
 			</div><!-- #sidebar-content ends -->	
 
 			<!-- SOCIAL ICONS ON SIDEBAR'S BOTTOM PART -->
-			<ul id="sidebar-bottom">			
-				<li><a href="#"><img src="images/sidebar_icons/facebook.png" alt="" /></a></li>
-				<li><a href="#"><img src="images/sidebar_icons/twitter.png" alt="" /></a></li>
-				<li><a href="#"><img src="images/sidebar_icons/rss.png" alt="" /></a></li>
-			</ul>
-			
-			<!-- COPYRIGHT TEXT -->
-			<p id="copyright">EMPIRE XHTMLMore Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+
 			
 		</div><!-- #sidebar ends -->			
 					
