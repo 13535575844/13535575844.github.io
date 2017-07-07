@@ -108,8 +108,8 @@
       <file leaf-file-name="portfolio-2c.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portfolio-2c.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5209">
-              <caret line="270" column="52" lean-forward="false" selection-start-line="270" selection-start-column="52" selection-end-line="270" selection-end-column="52" />
+            <state relative-caret-position="916">
+              <caret line="150" column="72" lean-forward="false" selection-start-line="150" selection-start-column="72" selection-end-line="150" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -124,7 +124,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/blog-1.html" />
-        <option value="$PROJECT_DIR$/portfolio-2c.html" />
         <option value="$PROJECT_DIR$/portfolio-3c.html" />
         <option value="$PROJECT_DIR$/post.html" />
         <option value="$PROJECT_DIR$/stylings-contact_buttons.html" />
@@ -135,6 +134,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/gallery.html" />
         <option value="$PROJECT_DIR$/blog-2.html" />
+        <option value="$PROJECT_DIR$/portfolio-2c.html" />
       </list>
     </option>
   </component>
@@ -280,12 +280,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499394139282</updated>
-      <workItem from="1499394140865" duration="6119000" />
+      <workItem from="1499394140865" duration="6474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6119000" />
+    <option name="totallyTimeSpent" value="6474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
@@ -425,8 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio-2c.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5209">
-          <caret line="270" column="52" lean-forward="false" selection-start-line="270" selection-start-column="52" selection-end-line="270" selection-end-column="52" />
+        <state relative-caret-position="916">
+          <caret line="150" column="72" lean-forward="false" selection-start-line="150" selection-start-column="72" selection-end-line="150" selection-end-column="72" />
           <folding />
         </state>
       </provider>
